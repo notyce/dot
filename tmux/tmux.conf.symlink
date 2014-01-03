@@ -1,0 +1,13 @@
+set-option -g status on
+set-option -g status-interval 1
+set-option -g status-utf8 on
+set-option -g status-position top
+
+set-window-option -g xterm-keys on
+
+set -g default-command /bin/zsh
+set -g default-shell /bin/zsh
+
+source-file ~/.dotfiles/tmux/conf/mouse.tmux.conf
+source-file ~/.dotfiles/tmux/conf/powerline.tmux.conf
+source-file ~/.dotfiles/tmux/conf/bindings.tmux.conf
