@@ -37,3 +37,8 @@ do
   source $file
 done
 
+export DOCKER_HOST=tcp://localhost:4243
+
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
+

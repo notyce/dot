@@ -1,4 +1,4 @@
-if filereadable('./Session.vim')           
+if filereadable('./Session.vim')
   execute Session.vim"
 endif
 
@@ -11,9 +11,9 @@ call vundle#rc()
 syntax enable
 set laststatus=2 " Always show the statusline
 
-source ~/.dot/vim/bundles.vim 
+source ~/.dot/vim/bundles.vim
 
-filetype plugin indent on     " required! 
+filetype plugin indent on     " required!
 
 let mapleader = ","
 
@@ -35,7 +35,7 @@ colorscheme solarized
 
 let $JS_CMD='node'
 
-" settings 
+" settings
 
 set mouse=nicrh                                                       "enable mouse support in all modes
 set modeline
@@ -45,7 +45,7 @@ set showmode
 set showcmd
 set visualbell
 set cursorline
-" set cursorcolumn                 " currently disabled due to performance impacts
+"" set cursorcolumn                 " currently disabled due to performance impacts
 set ttyfast
 set ruler
 set laststatus=2
@@ -70,7 +70,7 @@ augroup checktime
         autocmd CursorHoldI     * silent! checktime
     endif
 augroup END
-set autowriteall 
+set autowriteall
 set hidden                                                           " allow vim to create hidden buffers
 set backspace=indent,eol,start                                       " allow backspacing over everything in insert mode
 set shortmess+=filmnrxoOtT      " abbrev. of messages (avoids 'hit enter')
@@ -126,19 +126,19 @@ set statusline+=%r
 set statusline+=%h
 set statusline+=%w
 
-set statusline+=\ 
+set statusline+=\
 
 set statusline+=[%{&ff}]
 
-set statusline+=\  
+set statusline+=\
 
 set statusline+=%y
 
-set statusline+=\ 
+set statusline+=\
 
 set statusline+=[\%03.3b]
 
-set statusline+=\ 
+set statusline+=\
 
 set statusline+=%#redbar#                " Highlight the following as a warning.
 set statusline+=%{SyntasticStatuslineFlag()} " Syntastic errors.
@@ -148,15 +148,15 @@ set statusline+=%=
 
 set statusline+=%{fugitive#statusline()}
 
-set statusline+=\ 
+set statusline+=\
 
 set statusline+=%-14.(%l,%c%V%)
 
-set statusline+=\ 
+set statusline+=\
 
 set statusline+=%P
 
-set statusline+=\ 
+set statusline+=\
 
 set statusline+=%L
 set statusline+=
@@ -181,7 +181,7 @@ set wildignore+=*.luac                           " Lua byte code
 
 set wildignore+=migrations                       " Django migrations
 set wildignore+=*.pyc                            " Python byte code
-set wildignore+=tmp 
+set wildignore+=tmp
 set wildignore+=*.class                            " Java class files"
 set wildignore+=*.jar                            " Java jar files"
 set wildignore+=*node_modules                     " Node modules dir
@@ -340,7 +340,7 @@ let g:Powerline_symbols = 'fancy'
 " }}}
 
 " CTRLP {{{
-let g:ctrlp_map = '<C-G>' 
+let g:ctrlp_map = '<C-G>'
 map <leader>rr :ClearCtrlPCache<CR>
 map <C-d> :CtrlPBuffer<CR>
 map <C-ö> :CtrlPMRU<CR>
@@ -359,6 +359,3 @@ source ~/.vim/vimrc_local
 if filereadable('./.vimrc.project')                                     "load session if existent
   execute "source ./.vimrc.project"
 endif
-
-
-

@@ -21,9 +21,9 @@ git_dirty() {
   else
     if [[ "$st" =~ ^nothing ]]
     then
-      echo "on %{$fg_bold[green]%}$(git_prompt_info)%{$reset_color%}"
+      echo "> $(git_prompt_info) $FG[082]✓$FX[reset]"
     else
-      echo "on %{$fg_bold[red]%}$(git_prompt_info)%{$reset_color%}"
+      echo "> $(git_prompt_info) $FG[001]✖$FX[reset]"
     fi
   fi
 }
@@ -47,10 +47,12 @@ need_push () {
   fi
 }
 
+#%F{$code}$ZSH_SPECTRUM_TEXT%f
+
 ruby_version() {
   if (( $+commands[rbenv] ))
   then
-    echo "$(rbenv version | awk '{print $1}')"
+    echo "$(rbenv version | awk '{print $1}')%}"
   fi
 
   if (( $+commands[rvm-prompt] ))

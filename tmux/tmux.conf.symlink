@@ -11,3 +11,9 @@ set -g default-shell /bin/zsh
 source-file ~/.dotfiles/tmux/conf/mouse.tmux.conf
 source-file ~/.dotfiles/tmux/conf/powerline.tmux.conf
 source-file ~/.dotfiles/tmux/conf/bindings.tmux.conf
+
+set -g status-right '#[fg=white]#(hostname)@#(host `hostname` | cut -d " " -f 4)'
+
+
+set -g status-right '#[fg=white]#(echo ${SSH_CONNECTION%%%% *})'
+
