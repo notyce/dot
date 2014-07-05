@@ -23,6 +23,7 @@ brew cask install transmission
 brew cask install limechat
 brew cask install nvalt
 brew cask install vlc
+brew cask install simpholders
 
 brew install coreutils spark grc mongodb cloc irssi node  
 
