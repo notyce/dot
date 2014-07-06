@@ -1,6 +1,7 @@
 
 # cheers, @ehrenmurdick
 # http://github.com/ehrenmurdick/config/blob/master/zsh/prompt.zsh
+autoload -U colors && colors
 
 if (( $+commands[git] ))
 then
@@ -21,9 +22,9 @@ git_dirty() {
   else
     if [[ "$st" =~ ^nothing ]]
     then
-      echo "> $(git_prompt_info) $FG[082]✓$FX[reset]"
+      echo "> $(git_prompt_info) %{$fg[red]%}✓%{$reset_color%}"
     else
-      echo "> $(git_prompt_info) $FG[001]✖$FX[reset]"
+      echo "> $(git_prompt_info) %{$fg[red]%}✖%{$reset_color%}"
     fi
   fi
 }
