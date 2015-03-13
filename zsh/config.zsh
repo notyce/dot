@@ -44,4 +44,4 @@ zle -N newtab
 # bindkey '^?' backward-delete-char
 
 bindkey -s '\el' 'ls -la\n'
-bindkey '^r' history-incremental-search-backward
+#bindkey '^r' history-incremental-search-backward

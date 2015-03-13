@@ -25,7 +25,25 @@ HISTFILE=~/.histfile
 HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob
-bindkey -e
+
+
+export KEYTIMEOUT=1
+#bindkey -v
+
+#function zle-line-init zle-keymap-select {
+#    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
+#    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}"
+#    zle reset-prompt
+#}
+
+#zle -N zle-line-init
+#zle -N zle-keymap-select
+
+#autoload -U edit-command-line
+#zle -N edit-command-line
+#bindkey -M vicmd v edit-command-line
+
+
 zstyle :compinstall filename '/Users/shm/.zshrc'
 
 autoload -Uz compinit
@@ -37,8 +55,10 @@ do
   source $file
 done
 
-export DOCKER_HOST=tcp://localhost:4243
+
+export DOCKER_HOST=tcp://192.168.59.103:2376
+export DOCKER_CERT_PATH=/Users/shm/.boot2docker/certs/boot2docker-vm
+export DOCKER_TLS_VERIFY=1
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-

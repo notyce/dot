@@ -24,8 +24,9 @@ brew cask install limechat
 brew cask install nvalt
 brew cask install vlc
 brew cask install simpholders
+brew cask install atom
 
-brew install coreutils spark grc mongodb cloc irssi node  
+brew install coreutils spark grc mongodb cloc irssi node
 
 
 exit 0
