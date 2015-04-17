@@ -26,6 +26,7 @@ HISTSIZE=1000
 SAVEHIST=1000
 setopt autocd extendedglob
 
+#bindkey -e
 
 export KEYTIMEOUT=1
 #bindkey -v
@@ -55,10 +56,11 @@ do
   source $file
 done
 
-
 export DOCKER_HOST=tcp://192.168.59.103:2376
 export DOCKER_CERT_PATH=/Users/shm/.boot2docker/certs/boot2docker-vm
 export DOCKER_TLS_VERIFY=1
 
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
