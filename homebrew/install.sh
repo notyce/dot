@@ -13,20 +13,22 @@ then
 fi
 
 # Install homebrew packages
-brew tap phinze/cask
-brew install brew-cask
+brew install caskroom/cask/brew-cask
 
 brew cask install google-chrome
 brew cask install textmate
 brew cask install transmit
 brew cask install transmission
-brew cask install limechat
+#brew cask install limechat
 brew cask install nvalt
 brew cask install vlc
-brew cask install simpholders
+#brew cask install simpholders
 brew cask install atom
+brew cask install virtualbox
+brew cask install vagrant
+brew cask install vagrant-manager
 
-brew install coreutils spark grc mongodb cloc irssi node
+#brew install coreutils spark mongodb cloc irssi node
 
 
 exit 0
