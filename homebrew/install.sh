@@ -12,6 +12,8 @@ then
   ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
 fi
 
+
+
 # Install homebrew packages
 brew install caskroom/cask/brew-cask
 
@@ -27,6 +29,13 @@ brew cask install atom
 brew cask install virtualbox
 brew cask install vagrant
 brew cask install vagrant-manager
+brew cask install onepassword
+brew cask install dropbox
+
+brew cask install quicklook-csv
+brew cask install qlmarkdown
+brew cask install quicklook-json
+brew cask install qlstephen
 
 #brew install coreutils spark mongodb cloc irssi node
 
