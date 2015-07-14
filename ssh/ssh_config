@@ -1,0 +1,21 @@
+Host *
+  User mschaerfer
+
+Host vaut*
+  User michael
+  IdentityFile ~/.ssh/rewe-keys/michael
+
+Host *rewe-group.at
+  IdentityFile ~/.ssh/rewe_stash
+  Port 7999
+
+Host ddgit
+  HostName git.lan.ddg
+  User mschaerfer
+  IdentityFile ~/.ssh/id_rsa
+
+Host github-as-notyce
+  HostName github.com
+  User git
+  IdentityFile /Users/shm/.ssh/notyce_github_rsa
+  IdentitiesOnly yes
