@@ -37,6 +37,10 @@ brew cask install qlmarkdown
 brew cask install quicklook-json
 brew cask install qlstephen
 
+brew install nvm
+
+brew install openssl && brew link --force openssl
+
 #brew install coreutils spark mongodb cloc irssi node
 
 
