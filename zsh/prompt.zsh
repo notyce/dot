@@ -51,14 +51,22 @@ need_push () {
 #%F{$code}$ZSH_SPECTRUM_TEXT%f
 
 ruby_version() {
-  if (( $+commands[rbenv] ))
+  if (( $+commands[ruby] ))
   then
-    echo "$(rbenv version | awk '{print $1}')%}"
+    echo "$(ruby --version |awk '{print $2}')"
   fi
+}
 
-  if (( $+commands[rvm-prompt] ))
+node_version() {
+  echo "$(nvm current)"
+}
+
+node_prompt() {
+  if ! [[ -z "$(node_version)" ]]
   then
-    echo "$(rvm-prompt | awk '{print $1}')"
+    echo "%{$fg_bold[yellow]%}$(node_version)%{$reset_color%} "
+  else
+    echo ""
   fi
 }
 
@@ -76,7 +84,7 @@ directory_name() {
 }
 
 
-export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(rb_prompt)| $(node_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
 #export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_prompt_status)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"

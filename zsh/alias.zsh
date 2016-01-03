@@ -10,3 +10,4 @@ alias rake='noglob rake'
 alias bower='noglob bower'
 
 alias reload!='. ~/.zshrc'
+alias startdockerd= launchctl load ~/Library/LaunchAgents/homebrew.mxcl.boot2docker.plist

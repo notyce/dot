@@ -1,13 +1,16 @@
 #!/bin/sh
 
-if test ! $(which rbenv)
+brew install ruby-install
+
+if test ! $(which ruby-install)
 then
-  echo "  Installing rbenv for you."
-  brew install rbenv > rbenv-install.log
+  echo "  Installing ruby-install for you."
+  brew install ruby-install > ruby-install.log
+  ruby-install ruby
 fi
 
-if test ! $(which ruby-build)
+if test ! $(which chruby)
 then
-  echo "  Installing ruby-build for you."
-  brew install ruby-build > ruby-build-install.log
+  echo "  Installing chruby for you."
+  brew install chruby
 fi
