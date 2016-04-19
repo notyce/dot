@@ -81,24 +81,6 @@ bind r source-file ~/.tmux.conf \; display-message "Config reloaded..."
 # auto window rename
 set-window-option -g automatic-rename
 
-# Mouse mode is on by default.
-# <prefix> M -- to turn it off
-# <prefix> m -- to turn it on
-#
-# As of tmux 2.1, a backward-incompatible change was introduced.
-# mode-mouse and mouse-* no longer exist, replaced by simply
-# mouse <on|off>. Which is great, and easier, but unfortunately I use
-# tmux on systems which I don't foresee going to 2.1+ anytime soon.
-# So, time to test versions... this is kind of cheap and hacky, and it
-# won't work for 2.2 and beyond, but will work for now. I tried to make
-# this more generalized but have not been successful so far.
-#
-
-if-shell '[[ $(echo "$(tmux -V | cut -d" " -f2) >= 2.1" | bc) -eq 1 ]]' \
-    'set -g mouse on; bind m set -g mouse on \; display "Mouse ON"; bind M set -g mouse off \; display "Mouse OFF"' \
-    'set -g mode-mouse on; set -g mouse-resize-pane on; set -g mouse-select-pane on; set -g mouse-select-window on; bind m set -g mode-mouse on \; set -g mouse-resize-pane on \; set -g mouse-select-pane on \; set -g mouse-select-window on \; display "Mouse ON"; bind M set -g mode-mouse off \; set -g mouse-resize-pane off \; set -g mouse-select-pane off \; set -g mouse-select-window off \; display "Mouse OFF"'
-
-
 
 # Allow xterm titles in terminal window, terminal scrolling with scrollbar, and setting overrides of C-Up, C-Down, C-Left, C-Right
 # (commented out because it disables cursor navigation in vim)
@@ -119,6 +101,10 @@ set -g default-terminal "screen-256color"
 # status bar
 set-option -g status-utf8 on
 
+# mouse mode on
+set-option -g mouse on
+
+
 # https://github.com/edkolev/dots/blob/master/tmux.conf
 # Updates for tmux 1.9's current pane splitting paths.
 if-shell "[[ `tmux -V` == *1.9* ]]" 'unbind c; bind c new-window -c "#{pane_current_path}"'
@@ -126,3 +112,12 @@ if-shell "[[ `tmux -V` == *1.9* ]]" 'unbind s; bind s split-window -v -c "#{pane
 if-shell "[[ `tmux -V` == *1.9* ]]" "unbind '\"'; bind '\"' split-window -v -c '#{pane_current_path}'"
 if-shell "[[ `tmux -V` == *1.9* ]]" 'unbind v; bind v split-window -h -c "#{pane_current_path}"'
 if-shell "[[ `tmux -V` == *1.9* ]]" 'unbind %; bind % split-window -h -c "#{pane_current_path}"'
+
+
+# List of plugins
+set -g @plugin 'tmux-plugins/tpm'
+set -g @plugin 'tmux-plugins/tmux-sensible'
+set -g @plugin 'nhdaly/tmux-scroll-copy-mode'
+
+
+run '~/.dot/tmux/plugins/tpm/tpm'
