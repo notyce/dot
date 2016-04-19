@@ -45,7 +45,7 @@ export KEYTIMEOUT=1
 zstyle :compinstall filename '/Users/shm/.zshrc'
 
 autoload -Uz compinit
-compinit
+compinit -i
 
 # load every completion after autocomplete loads
 for file in ${(M)config_files:#*/completion.zsh}
@@ -53,9 +53,7 @@ do
   source $file
 done
 
-export DOCKER_HOST=tcp://192.168.59.103:2376
-export DOCKER_CERT_PATH=/Users/shm/.boot2docker/certs/boot2docker-vm
-export DOCKER_TLS_VERIFY=1
+
 
 export NVM_DIR=~/.nvm
 source $(brew --prefix nvm)/nvm.sh
