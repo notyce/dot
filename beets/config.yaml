@@ -1,7 +1,0 @@
-plugins: fetchart discogs lastgenre web 
-library: ~/Dropbox/musicdb.blb
-directory: ~/beetmusic
-import:
-    copy: no
-    write: no
-
