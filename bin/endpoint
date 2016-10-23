@@ -8,7 +8,7 @@ then
     killall TrGui
     killall TrGUI;
 fi
-sudo launchctl $1 /Library/LaunchDaemons/com.checkpoint.epc.service.plist && sudo kext$1  /System/Library/Extensions/cpfw.kext
+sudo launchctl $1 /Library/LaunchDaemons/com.checkpoint.epc.service.plist && sudo kext$1  /Library/Extensions/cpfw.kext
 if [ $1 == 'load' ]
     then
     /Applications/Endpoint\ Security\ VPN.app/Contents/MacOS/Endpoint_Security_VPN 2>1 > /dev/null &
