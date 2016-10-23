@@ -1,0 +1,38 @@
+"*":
+  core:
+    disabledPackages: [
+      "background-tips"
+      "exception-reporting"
+      "metrics"
+    ]
+    hideGitIgnoredFiles: true
+    ignoredNames: [
+      ".bundle"
+      ".git"
+      "log"
+      "repositories"
+      "tmp"
+      "vendor"
+    ]
+    telemetryConsent: "no"
+    themes: [
+      "atom-dark-ui"
+      "atom-dark-syntax"
+    ]
+  editor:
+    fontFamily: "menlo"
+    fontSize: 13
+    invisibles: {}
+    showIndentGuide: true
+  nvatom:
+    directory: "/Users/shm/Dropbox/__sync/nvalt"
+  "release-notes":
+    viewedVersion: "0.89.0"
+  "spell-check":
+    grammars: [
+      "text.plain"
+      "source.gfm"
+      "text.git-commit"
+    ]
+  welcome:
+    showOnStartup: false
