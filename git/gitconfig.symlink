@@ -4,8 +4,8 @@
 [hub]
         protocol = https
 [user]
-	name = shm
-	email = notyce@gmail.com
+	name = Michael Schaerfer
+	email = m.schaerfer@emakina.at
 [alias]
         co = checkout
         promote = !$ZSH/bin/git-promote
