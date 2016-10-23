@@ -15,7 +15,7 @@ fi
 
 
 # Install homebrew packages
-brew install caskroom/cask/brew-cask
+brew tap caskroom/cask
 
 brew cask install google-chrome
 brew cask install textmate
@@ -31,6 +31,9 @@ brew cask install vagrant
 brew cask install vagrant-manager
 brew cask install onepassword
 brew cask install dropbox
+brew cask install calibre
+brew cask install docker
+
 
 brew cask install quicklook-csv
 brew cask install qlmarkdown
@@ -42,6 +45,8 @@ brew install nvm
 brew install openssl && brew link --force openssl
 
 #brew install coreutils spark mongodb cloc irssi node
+
+
 
 
 exit 0
