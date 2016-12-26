@@ -28,19 +28,6 @@ setopt autocd extendedglob
 
 export KEYTIMEOUT=1
 
-#function zle-line-init zle-keymap-select {
-#    VIM_PROMPT="%{$fg_bold[yellow]%} [% NORMAL]%  %{$reset_color%}"
-#    RPS1="${${KEYMAP/vicmd/$VIM_PROMPT}/(main|viins)/}"
-#    zle reset-prompt
-#}
-
-#zle -N zle-line-init
-#zle -N zle-keymap-select
-
-#autoload -U edit-command-line
-#zle -N edit-command-line
-#bindkey -M vicmd v edit-command-line
-
 
 zstyle :compinstall filename '/Users/shm/.zshrc'
 
@@ -57,11 +44,12 @@ done
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
-
-
+export HOMEBREW_GITHUB_API_TOKEN=775c1f4863909c23cce9b05784d2a0d9d4a5c528
 
 source $DOT/zsh/bindkey.zsh
 
 # rubies
 source /usr/local/opt/chruby/share/chruby/chruby.sh
-source /usr/local/opt/chruby/share/chruby/auto.sh
+
+#zsh syntax highlighting
+# source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
