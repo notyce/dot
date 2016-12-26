@@ -4,5 +4,6 @@
 *.swp
 *.rbc
 
+cache
 atom.symlink
 tmux/plugins
