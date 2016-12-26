@@ -9,16 +9,27 @@
 if test ! $(which brew)
 then
   echo "  Installing Homebrew for you."
-  ruby -e "$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)" > /tmp/homebrew-install.log
+  /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)" > /tmp/homebrew-install.log
 fi
 
+brew install git
+brew install zsh
+brew install tmux
+brew install nvm
+brew install httpie
+brew install jq
+brew install nmap
+brew install prettyping
+brew install openssl && brew link --force openssl
+brew install ssh-copy-id
+brew install youtube-dl
 
 
 # Install homebrew packages
 brew tap caskroom/cask
 
 brew cask install google-chrome
-brew cask install textmate
+#brew cask install textmate
 brew cask install transmit
 brew cask install transmission
 #brew cask install limechat
@@ -27,24 +38,17 @@ brew cask install vlc
 #brew cask install simpholders
 brew cask install atom
 brew cask install virtualbox
-brew cask install vagrant
-brew cask install vagrant-manager
+#brew cask install vagrant
+#brew cask install vagrant-manager
 brew cask install onepassword
 brew cask install dropbox
 brew cask install calibre
 brew cask install docker
 
-
 brew cask install quicklook-csv
 brew cask install qlmarkdown
 brew cask install quicklook-json
 brew cask install qlstephen
-
-brew install nvm
-
-brew install openssl && brew link --force openssl
-
-#brew install coreutils spark mongodb cloc irssi node
 
 
 
