@@ -85,6 +85,7 @@ directory_name() {
 
 
 export PROMPT=$'\n$(rb_prompt)| $(node_prompt) in $(directory_name) $(git_dirty)$(need_push)\n› '
+export PROMPT=$'\n$(rb_prompt)| in $(directory_name) $(git_dirty)$(need_push)\n› '
 #export PROMPT=$'\n$(rb_prompt)in $(directory_name) $(git_prompt_status)$(need_push)\n› '
 set_prompt () {
   export RPROMPT="%{$fg_bold[cyan]%}%{$reset_color%}"
@@ -92,6 +93,7 @@ set_prompt () {
 
 precmd() {
   title "zsh" "%m" "%55<...<%~"
+  tmux setenv -g TMUX_PATH "$PWD"; tmux refresh-client -S;
   set_prompt
 }
 
