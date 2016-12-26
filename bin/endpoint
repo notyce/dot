@@ -2,14 +2,15 @@
 #
 # load/unload checkpoint vpn client
 
-if [ $1 == "unload" ]
+SERVICE='Endpoint_Security_VPN'
+
+if ps ax | grep -v grep | grep $SERVICE > /dev/null
 then
-    killall Endpoint_Security_VPN
-    killall TrGui
-    killall TrGUI;
-fi
-sudo launchctl $1 /Library/LaunchDaemons/com.checkpoint.epc.service.plist && sudo kext$1  /Library/Extensions/cpfw.kext
-if [ $1 == 'load' ]
-    then
-    /Applications/Endpoint\ Security\ VPN.app/Contents/MacOS/Endpoint_Security_VPN 2>1 > /dev/null &
+    # $SERVICE is running. Shut it down.
+    sudo pkill $SERVICE
+    sudo launchctl unload /Library/LaunchDaemons/com.checkpoint.epc.service.plist && sudo kextunload /Library/Application\ Support/Checkpoint/Endpoint\ Connect/cpfw.kext
+else
+    # $SERVICE is not running. Fire it up.
+    sudo launchctl load /Library/LaunchDaemons/com.checkpoint.epc.service.plist && sudo kextload /Library/Application\ Support/Checkpoint/Endpoint\ Connect/cpfw.kext
+    /Applications/Endpoint\ Security\ VPN.app/Contents/MacOS/Endpoint_Security_VPN &>/dev/null &
 fi
