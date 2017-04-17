@@ -1,0 +1,6 @@
+#!/bin/zsh
+#
+
+zmodload zsh/stat
+autoload -U zmv
+zmv '(*)' '$(stat -F %Y%m%d_%H%M%S +mtime -- $1)${${1:e}:+.$1:e}'
