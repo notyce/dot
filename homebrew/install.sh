@@ -50,6 +50,8 @@ brew cask install qlmarkdown
 brew cask install quicklook-json
 brew cask install qlstephen
 
+brew tap caskroom/fonts
+brew cask install font-fira-code
 
 
 
