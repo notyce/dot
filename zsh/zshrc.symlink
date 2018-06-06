@@ -44,7 +44,6 @@ done
 export NVM_DIR="$HOME/.nvm"
 . "$(brew --prefix nvm)/nvm.sh"
 
-export HOMEBREW_GITHUB_API_TOKEN=775c1f4863909c23cce9b05784d2a0d9d4a5c528
 
 source $DOT/zsh/bindkey.zsh
 
@@ -53,3 +52,10 @@ source /usr/local/opt/chruby/share/chruby/chruby.sh
 
 #zsh syntax highlighting
 # source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/shm/.nvm/versions/node/v7.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/shm/.nvm/versions/node/v7.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/shm/.nvm/versions/node/v7.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/shm/.nvm/versions/node/v7.5.0/lib/node_modules/serverless/node_modules/tabtab/.completions/sls.zsh
