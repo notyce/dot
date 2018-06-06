@@ -29,27 +29,35 @@ brew install youtube-dl
 brew tap caskroom/cask
 
 brew cask install google-chrome
+brew cask install iterm2
 #brew cask install textmate
 brew cask install transmit
 brew cask install transmission
 #brew cask install limechat
 brew cask install nvalt
 brew cask install vlc
+brew cask install alfred
 #brew cask install simpholders
 brew cask install atom
+brew cask install visual-studio-code
 brew cask install virtualbox
 #brew cask install vagrant
 #brew cask install vagrant-manager
-brew cask install onepassword
+brew cask install 1password
 brew cask install dropbox
 brew cask install calibre
 brew cask install docker
+
+
 
 brew cask install quicklook-csv
 brew cask install qlmarkdown
 brew cask install quicklook-json
 brew cask install qlstephen
 
+# fonts
+brew tap caskroom/fonts
+brew cask install font-fira-code
 
 
 
