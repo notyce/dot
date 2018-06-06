@@ -93,25 +93,11 @@ set -g message-fg black
 set -g message-bg white
 set -g message-attr bold
 
-
-
-
 # pane number display
 #set-option -g display-panes-active-colour colour33 #blue
 #set-option -g display-panes-colour colour166 #orange
 # clock
 #set-window-option -g clock-mode-colour green #green
-
-
-
-
-
-
-
-
-
-
-
 
 # Allows us to use C-a a <command> to send commands to a TMUX session inside
 # another TMUX session
@@ -130,18 +116,6 @@ set -g message-attr bold
 #bind l select-pane -R
 
 #bind-key C command-prompt -p "Name of new window: " "new-window -n '%%'"
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 # https://github.com/edkolev/dots/blob/master/tmux.conf
